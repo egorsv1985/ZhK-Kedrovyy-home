@@ -1,6 +1,20 @@
 // Заголовки, общие БЄМ блоки и проче...
 
 .title {
+  font-family: "Montserrat-Medium";
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+
+  color: $textSecondColor;
+
+  &--extrabold {
+    font-family: "Montserrat-ExtraBold";
+    font-weight: 800;
+    color: $textMainColor;
+    display: block;
+  }
 }
 
 .subtitle {
@@ -14,6 +28,15 @@
 }
 
 .text {
+  font-family: "Montserrat-Medium";
+font-weight: 500;
+font-size: 18px;
+line-height: 22px;
+text-align: center;
+
+color: $textMainColor;
+
+
   &--extrabold {
     font-family: "Montserrat-ExtraBold";
     font-weight: 800;

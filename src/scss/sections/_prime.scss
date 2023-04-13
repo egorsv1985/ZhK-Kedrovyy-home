@@ -41,6 +41,15 @@
 
       border: 1px solid #fff;
     }
+    &::after {
+      @include pseudo;
+      @include background(url("@img/icons/prime-stars.svg"));
+      width: 46px;
+      height: 34px;
+      position: absolute;
+      right: 65px;
+      top: 35px;
+    }
   }
 
   // .prime__subtitle
@@ -129,15 +138,14 @@
   &__buttons {
     @include flex(space-between, center);
     gap: 20px;
-    
-    
+
     height: 32px;
-    
   }
 
   .swiper {
     position: absolute;
     top: 0;
+    max-width: 100%;
     // z-index: -1;
   }
   .primeSwiper {
@@ -146,17 +154,18 @@
   }
   .swiper-slide {
     position: relative;
+    max-height: 888px;
     &::before {
-      // @include pseudo;
+      @include pseudo;
 
       position: absolute;
-      width: 1890px;
-      height: 888px;
-      left: -225px;
+      @include wh(100%);
+      left: 0px;
       top: 0;
 
       background-color: rgba(0, 0, 0, 0.6);
     }
+   
   }
   .swiper-button-next,
   .swiper-button-prev {
@@ -180,7 +189,6 @@
   }
 
   .swiper-button-next {
-   
   }
 
   .swiper-button-prev {
@@ -218,8 +226,7 @@
     left: 0;
     max-width: 255px;
     &-drag {
-      background: $accentColor;
-      height: 3px;
+     
     }
   }
   .swiper-pagination {
